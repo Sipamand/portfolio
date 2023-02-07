@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      :root {
+        --main: #d2e23d;
+        --secondary: #576cc0;
+        --third: #f36a8d;
+        --text: black;
+        --background: white;
+      }
+
+      .mobile-container {
+        margin: auto;
+        color: rgb(14, 13, 13);
+        border-radius: 100px;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(10, 10, 10);
+        position: relative;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+
+      .topnav a.icon {
+        background: rgb(67, 190, 56);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .active {
+        background-color: #85d6b8;
+        color: rgba(51, 194, 146, 0.377);
+      }
+
+      #myLinks {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+      }
+
+      .landing {
+        display: flex;
+        height: 70vh;
+        align-items: center;
+        place-content: center;
+        grid-template-columns: repeat(47%, 1fr);
+      }
+
+      .landing-text {
+        display: flex;
+        flex-flow: column;
+        gap: 1em;
+      }
+      .landing-text h3 {
+        font-size: 30px;
+      }
+
+      .section {
+        min-height: 40vh;
+        margin: 2rem 10rem;
+        color: black;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+      }
+
+      .nav-links {
+        transform: scale(0);
+        transform-origin: top;
+      }
+
+      .nav-links-active {
+        transform: scale(1);
+        transition: all 1s;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      .skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 50%; background-color: #04AA6D;} /* Green */
+.css {width: 30%; background-color: #2196F3;} /* Blue */
+.js {width: 20%; background-color: #f44336;} /* Red */
+    </style>
+  </head>
+  <body>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" class="active">Sipamandla Flekisi</a>
+        <div id="myLinks">
+          <a href="#about">About</a>
+          <a href="#services">services</a>
+          <a href="#Skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <!-- landing section -->
+      <div class="landing" style="padding-left: 16px">
+        <div class="landing-text">
+          <h3><em>Hello this is Sipamandla Flekisi</em></h3>
+          <p>I’m a Junior Web Developer</p>
+        </div>
+        <div class="landing-image">
+          <img src="./icon.gif" alt="" srcset="" />
+        </div>
+      </div>
+
+      <!-- about section -->
+      <div class="section" id="about"> 
+        <div class="section-title">About</div>
+        <div class="section-information">
+          <p>
+            A Web Designer, or Web Applications Designer, is responsible for
+            designing the overall layout and aesthetic for websites. Their
+            duties include coding webpages or entire websites, meeting with
+            clients to review website templates or refine their designs and
+            running tests to preview layouts and website features.
+          </p>
+        </div>
+      </div>
+
+      <!-- services section -->
+      <div class="section" id="services">
+        <div class="section-title">Services</div>
+        <p><em>Frontend developer</em></p>
+        <div class="section-information">
+          <p>
+            As frontend developer I am responsible for the site's technical
+            aspects, such as its performance and capacity, which are measures of
+            a website's speed and how much traffic the site can handle. In
+            addition, web developers may create content for the site
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Skills">
+        <div class="section-title">Skills</div>
+<div class="section-information">
+  <p>HTML</p>
+  <div class="container">
+    <div class="skills html">50%</div>
+  </div>
+  
+  <p>CSS</p>
+  <div class="container">
+    <div class="skills css">30%</div>
+  </div>
+  
+  <p>JavaScript</p>
+  <div class="container">
+    <div class="skills js">20%</div>
+  </div>
+        </div>
+        </div>
+        
+        
+      </div>
+
+      <!-- services section -->
+      <div class="section" id="contact">
+        <div class="section-title">Contact</div>
+        <div class="section-information">
+          
+
+          <form action="/action_page.php">
+            <label for="fname">Full name:</label><br />
+            <input type="text" id="fname" name="fname" value="" /><br />
+            <label for="email">Email:</label><br />
+            <input type="text" id="lname" name="lname" value="" /><br />
+            <label for="Messsage">Messsage:</label><br />
+            <textarea name="" id="" cols="30" rows="10"></textarea><br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+          <div class="landing-image">
+            <img src="./icon.gif" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- End smartphone / tablet look -->
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "Flex";
+        }
+      }
+
+      // function handleNavLinks() {
+      //     var links = document.querySelector('.nav-links');
+
+      //     if (links.classList.contains('nav-links-active') === true) {
+      //         links.classList.remove('nav-links-active');
+      //     } else {
+      //         links.classList.add('nav-links-active')
+      //     }
+      // }
+    </script>
+  </body>
+</html>
